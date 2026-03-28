@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Color Preview</title>
+    <script src="/appearance-init.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-zinc-100 text-zinc-950 transition-colors dark:bg-zinc-950 dark:text-zinc-100">
+    <div class="mx-auto flex min-h-[calc(100vh-40px)] max-w-7xl flex-col gap-6 p-5 font-mono lg:flex-row">
+      <div class="flex min-w-0 flex-1">
+        <div class="flex min-h-full flex-1 flex-col gap-4">
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <div class="min-w-0 flex-1">
+              <label class="mb-2 block text-sm text-zinc-600 dark:text-zinc-300" for="theme-selector">Theme</label>
+              <select
+                id="theme-selector"
+                class="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-950 outline-none transition focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
+              ></select>
+            </div>
+            <div class="min-w-0 flex-1">
+              <label class="mb-2 block text-sm text-zinc-600 dark:text-zinc-300" for="language-selector">Language</label>
+              <select
+                id="language-selector"
+                class="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-950 outline-none transition focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
+              ></select>
+            </div>
+            <div class="min-w-0 flex-1">
+              <label class="mb-2 block text-sm text-zinc-600 dark:text-zinc-300" for="appearance-selector">Appearance</label>
+              <select
+                id="appearance-selector"
+                class="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-zinc-950 outline-none transition focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
+              >
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="system">System</option>
+              ></select>
+            </div>
+          </div>
+          <div class="flex min-h-0 flex-1 flex-col">
+            <label class="mb-2 block text-sm text-zinc-600 dark:text-zinc-300" for="code-input">Source code</label>
+            <textarea
+              id="code-input"
+              class="min-h-80 flex-1 resize-y rounded-lg border border-zinc-300 bg-white p-4 leading-6 text-zinc-950 outline-none transition focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-800 dark:text-white"
+              spellcheck="false"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="flex min-w-0 flex-1 flex-col gap-5">
+        <div id="app"></div>
+        <div id="specimen-preview" class="flex flex-col gap-2">
+          <label class="block text-sm text-zinc-600 dark:text-zinc-300" for="specimen-image">Specimen SVG</label>
+          <img
+            id="specimen-image"
+            class="block w-full max-w-[520px] rounded-lg border border-zinc-300 bg-white dark:border-zinc-700 dark:bg-zinc-950"
+            alt="Theme specimen"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

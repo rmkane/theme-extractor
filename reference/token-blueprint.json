@@ -1,0 +1,2601 @@
+{
+  "generatedAt": "2026-03-28T03:37:05.868Z",
+  "source": {
+    "languageId": "java",
+    "sampleCode": "public class Main {\n  int num = 1;\n  boolean bool = true;\n  String foo = \"bar\";\n\n  static void printMessage() {\n    System.out.println(\"Hello World!\");\n  }\n\n  public static void main(String[] args) {\n    // Print message to stdout.\n    printMessage();\n  }\n}",
+    "tokenCount": 84,
+    "nonWhitespaceTokenCount": 53
+  },
+  "tokenBlueprint": [
+    {
+      "index": 0,
+      "type": "keyword",
+      "value": "public",
+      "startLine": 1,
+      "startColumn": 1,
+      "isWhitespace": false
+    },
+    {
+      "index": 1,
+      "type": "plain",
+      "value": " ",
+      "startLine": 1,
+      "startColumn": 7,
+      "isWhitespace": true
+    },
+    {
+      "index": 2,
+      "type": "keyword",
+      "value": "class",
+      "startLine": 1,
+      "startColumn": 8,
+      "isWhitespace": false
+    },
+    {
+      "index": 3,
+      "type": "plain",
+      "value": " ",
+      "startLine": 1,
+      "startColumn": 13,
+      "isWhitespace": true
+    },
+    {
+      "index": 4,
+      "type": "class",
+      "value": "Main",
+      "startLine": 1,
+      "startColumn": 14,
+      "isWhitespace": false
+    },
+    {
+      "index": 5,
+      "type": "plain",
+      "value": " ",
+      "startLine": 1,
+      "startColumn": 18,
+      "isWhitespace": true
+    },
+    {
+      "index": 6,
+      "type": "punctuation-brace",
+      "value": "{",
+      "startLine": 1,
+      "startColumn": 19,
+      "isWhitespace": false
+    },
+    {
+      "index": 7,
+      "type": "plain",
+      "value": "\n  ",
+      "startLine": 1,
+      "startColumn": 20,
+      "isWhitespace": true
+    },
+    {
+      "index": 8,
+      "type": "primitive-type",
+      "value": "int",
+      "startLine": 2,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 9,
+      "type": "plain",
+      "value": " ",
+      "startLine": 2,
+      "startColumn": 6,
+      "isWhitespace": true
+    },
+    {
+      "index": 10,
+      "type": "variable",
+      "value": "num",
+      "startLine": 2,
+      "startColumn": 7,
+      "isWhitespace": false
+    },
+    {
+      "index": 11,
+      "type": "plain",
+      "value": " ",
+      "startLine": 2,
+      "startColumn": 10,
+      "isWhitespace": true
+    },
+    {
+      "index": 12,
+      "type": "operator",
+      "value": "=",
+      "startLine": 2,
+      "startColumn": 11,
+      "isWhitespace": false
+    },
+    {
+      "index": 13,
+      "type": "plain",
+      "value": " ",
+      "startLine": 2,
+      "startColumn": 12,
+      "isWhitespace": true
+    },
+    {
+      "index": 14,
+      "type": "number",
+      "value": "1",
+      "startLine": 2,
+      "startColumn": 13,
+      "isWhitespace": false
+    },
+    {
+      "index": 15,
+      "type": "punctuation-delimiter",
+      "value": ";",
+      "startLine": 2,
+      "startColumn": 14,
+      "isWhitespace": false
+    },
+    {
+      "index": 16,
+      "type": "plain",
+      "value": "\n  ",
+      "startLine": 2,
+      "startColumn": 15,
+      "isWhitespace": true
+    },
+    {
+      "index": 17,
+      "type": "primitive-type",
+      "value": "boolean",
+      "startLine": 3,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 18,
+      "type": "plain",
+      "value": " ",
+      "startLine": 3,
+      "startColumn": 10,
+      "isWhitespace": true
+    },
+    {
+      "index": 19,
+      "type": "variable",
+      "value": "bool",
+      "startLine": 3,
+      "startColumn": 11,
+      "isWhitespace": false
+    },
+    {
+      "index": 20,
+      "type": "plain",
+      "value": " ",
+      "startLine": 3,
+      "startColumn": 15,
+      "isWhitespace": true
+    },
+    {
+      "index": 21,
+      "type": "operator",
+      "value": "=",
+      "startLine": 3,
+      "startColumn": 16,
+      "isWhitespace": false
+    },
+    {
+      "index": 22,
+      "type": "plain",
+      "value": " ",
+      "startLine": 3,
+      "startColumn": 17,
+      "isWhitespace": true
+    },
+    {
+      "index": 23,
+      "type": "literal",
+      "value": "true",
+      "startLine": 3,
+      "startColumn": 18,
+      "isWhitespace": false
+    },
+    {
+      "index": 24,
+      "type": "punctuation-delimiter",
+      "value": ";",
+      "startLine": 3,
+      "startColumn": 22,
+      "isWhitespace": false
+    },
+    {
+      "index": 25,
+      "type": "plain",
+      "value": "\n  ",
+      "startLine": 3,
+      "startColumn": 23,
+      "isWhitespace": true
+    },
+    {
+      "index": 26,
+      "type": "type",
+      "value": "String",
+      "startLine": 4,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 27,
+      "type": "plain",
+      "value": " ",
+      "startLine": 4,
+      "startColumn": 9,
+      "isWhitespace": true
+    },
+    {
+      "index": 28,
+      "type": "variable",
+      "value": "foo",
+      "startLine": 4,
+      "startColumn": 10,
+      "isWhitespace": false
+    },
+    {
+      "index": 29,
+      "type": "plain",
+      "value": " ",
+      "startLine": 4,
+      "startColumn": 13,
+      "isWhitespace": true
+    },
+    {
+      "index": 30,
+      "type": "operator",
+      "value": "=",
+      "startLine": 4,
+      "startColumn": 14,
+      "isWhitespace": false
+    },
+    {
+      "index": 31,
+      "type": "plain",
+      "value": " ",
+      "startLine": 4,
+      "startColumn": 15,
+      "isWhitespace": true
+    },
+    {
+      "index": 32,
+      "type": "string",
+      "value": "\"bar\"",
+      "startLine": 4,
+      "startColumn": 16,
+      "isWhitespace": false
+    },
+    {
+      "index": 33,
+      "type": "punctuation-delimiter",
+      "value": ";",
+      "startLine": 4,
+      "startColumn": 21,
+      "isWhitespace": false
+    },
+    {
+      "index": 34,
+      "type": "plain",
+      "value": "\n\n  ",
+      "startLine": 4,
+      "startColumn": 22,
+      "isWhitespace": true
+    },
+    {
+      "index": 35,
+      "type": "keyword",
+      "value": "static",
+      "startLine": 6,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 36,
+      "type": "plain",
+      "value": " ",
+      "startLine": 6,
+      "startColumn": 9,
+      "isWhitespace": true
+    },
+    {
+      "index": 37,
+      "type": "primitive-type",
+      "value": "void",
+      "startLine": 6,
+      "startColumn": 10,
+      "isWhitespace": false
+    },
+    {
+      "index": 38,
+      "type": "plain",
+      "value": " ",
+      "startLine": 6,
+      "startColumn": 14,
+      "isWhitespace": true
+    },
+    {
+      "index": 39,
+      "type": "function-declaration",
+      "value": "printMessage",
+      "startLine": 6,
+      "startColumn": 15,
+      "isWhitespace": false
+    },
+    {
+      "index": 40,
+      "type": "punctuation-paren",
+      "value": "(",
+      "startLine": 6,
+      "startColumn": 27,
+      "isWhitespace": false
+    },
+    {
+      "index": 41,
+      "type": "punctuation-paren",
+      "value": ")",
+      "startLine": 6,
+      "startColumn": 28,
+      "isWhitespace": false
+    },
+    {
+      "index": 42,
+      "type": "plain",
+      "value": " ",
+      "startLine": 6,
+      "startColumn": 29,
+      "isWhitespace": true
+    },
+    {
+      "index": 43,
+      "type": "punctuation-brace",
+      "value": "{",
+      "startLine": 6,
+      "startColumn": 30,
+      "isWhitespace": false
+    },
+    {
+      "index": 44,
+      "type": "plain",
+      "value": "\n    ",
+      "startLine": 6,
+      "startColumn": 31,
+      "isWhitespace": true
+    },
+    {
+      "index": 45,
+      "type": "member",
+      "value": "System",
+      "startLine": 7,
+      "startColumn": 5,
+      "isWhitespace": false
+    },
+    {
+      "index": 46,
+      "type": "punctuation-dot",
+      "value": ".",
+      "startLine": 7,
+      "startColumn": 11,
+      "isWhitespace": false
+    },
+    {
+      "index": 47,
+      "type": "member",
+      "value": "out",
+      "startLine": 7,
+      "startColumn": 12,
+      "isWhitespace": false
+    },
+    {
+      "index": 48,
+      "type": "punctuation-dot",
+      "value": ".",
+      "startLine": 7,
+      "startColumn": 15,
+      "isWhitespace": false
+    },
+    {
+      "index": 49,
+      "type": "function-call",
+      "value": "println",
+      "startLine": 7,
+      "startColumn": 16,
+      "isWhitespace": false
+    },
+    {
+      "index": 50,
+      "type": "punctuation-paren",
+      "value": "(",
+      "startLine": 7,
+      "startColumn": 23,
+      "isWhitespace": false
+    },
+    {
+      "index": 51,
+      "type": "string",
+      "value": "\"Hello World!\"",
+      "startLine": 7,
+      "startColumn": 24,
+      "isWhitespace": false
+    },
+    {
+      "index": 52,
+      "type": "punctuation-paren",
+      "value": ")",
+      "startLine": 7,
+      "startColumn": 38,
+      "isWhitespace": false
+    },
+    {
+      "index": 53,
+      "type": "punctuation-delimiter",
+      "value": ";",
+      "startLine": 7,
+      "startColumn": 39,
+      "isWhitespace": false
+    },
+    {
+      "index": 54,
+      "type": "plain",
+      "value": "\n  ",
+      "startLine": 7,
+      "startColumn": 40,
+      "isWhitespace": true
+    },
+    {
+      "index": 55,
+      "type": "punctuation-brace",
+      "value": "}",
+      "startLine": 8,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 56,
+      "type": "plain",
+      "value": "\n\n  ",
+      "startLine": 8,
+      "startColumn": 4,
+      "isWhitespace": true
+    },
+    {
+      "index": 57,
+      "type": "keyword",
+      "value": "public",
+      "startLine": 10,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 58,
+      "type": "plain",
+      "value": " ",
+      "startLine": 10,
+      "startColumn": 9,
+      "isWhitespace": true
+    },
+    {
+      "index": 59,
+      "type": "keyword",
+      "value": "static",
+      "startLine": 10,
+      "startColumn": 10,
+      "isWhitespace": false
+    },
+    {
+      "index": 60,
+      "type": "plain",
+      "value": " ",
+      "startLine": 10,
+      "startColumn": 16,
+      "isWhitespace": true
+    },
+    {
+      "index": 61,
+      "type": "primitive-type",
+      "value": "void",
+      "startLine": 10,
+      "startColumn": 17,
+      "isWhitespace": false
+    },
+    {
+      "index": 62,
+      "type": "plain",
+      "value": " ",
+      "startLine": 10,
+      "startColumn": 21,
+      "isWhitespace": true
+    },
+    {
+      "index": 63,
+      "type": "function-declaration",
+      "value": "main",
+      "startLine": 10,
+      "startColumn": 22,
+      "isWhitespace": false
+    },
+    {
+      "index": 64,
+      "type": "punctuation-paren",
+      "value": "(",
+      "startLine": 10,
+      "startColumn": 26,
+      "isWhitespace": false
+    },
+    {
+      "index": 65,
+      "type": "parameter-type",
+      "value": "String",
+      "startLine": 10,
+      "startColumn": 27,
+      "isWhitespace": false
+    },
+    {
+      "index": 66,
+      "type": "punctuation-bracket",
+      "value": "[",
+      "startLine": 10,
+      "startColumn": 33,
+      "isWhitespace": false
+    },
+    {
+      "index": 67,
+      "type": "punctuation-bracket",
+      "value": "]",
+      "startLine": 10,
+      "startColumn": 34,
+      "isWhitespace": false
+    },
+    {
+      "index": 68,
+      "type": "plain",
+      "value": " ",
+      "startLine": 10,
+      "startColumn": 35,
+      "isWhitespace": true
+    },
+    {
+      "index": 69,
+      "type": "parameter",
+      "value": "args",
+      "startLine": 10,
+      "startColumn": 36,
+      "isWhitespace": false
+    },
+    {
+      "index": 70,
+      "type": "punctuation-paren",
+      "value": ")",
+      "startLine": 10,
+      "startColumn": 40,
+      "isWhitespace": false
+    },
+    {
+      "index": 71,
+      "type": "plain",
+      "value": " ",
+      "startLine": 10,
+      "startColumn": 41,
+      "isWhitespace": true
+    },
+    {
+      "index": 72,
+      "type": "punctuation-brace",
+      "value": "{",
+      "startLine": 10,
+      "startColumn": 42,
+      "isWhitespace": false
+    },
+    {
+      "index": 73,
+      "type": "plain",
+      "value": "\n    ",
+      "startLine": 10,
+      "startColumn": 43,
+      "isWhitespace": true
+    },
+    {
+      "index": 74,
+      "type": "comment",
+      "value": "// Print message to stdout.",
+      "startLine": 11,
+      "startColumn": 5,
+      "isWhitespace": false
+    },
+    {
+      "index": 75,
+      "type": "plain",
+      "value": "\n    ",
+      "startLine": 11,
+      "startColumn": 32,
+      "isWhitespace": true
+    },
+    {
+      "index": 76,
+      "type": "function-call",
+      "value": "printMessage",
+      "startLine": 12,
+      "startColumn": 5,
+      "isWhitespace": false
+    },
+    {
+      "index": 77,
+      "type": "punctuation-empty-call-paren",
+      "value": "(",
+      "startLine": 12,
+      "startColumn": 17,
+      "isWhitespace": false
+    },
+    {
+      "index": 78,
+      "type": "punctuation-empty-call-paren",
+      "value": ")",
+      "startLine": 12,
+      "startColumn": 18,
+      "isWhitespace": false
+    },
+    {
+      "index": 79,
+      "type": "punctuation-delimiter",
+      "value": ";",
+      "startLine": 12,
+      "startColumn": 19,
+      "isWhitespace": false
+    },
+    {
+      "index": 80,
+      "type": "plain",
+      "value": "\n  ",
+      "startLine": 12,
+      "startColumn": 20,
+      "isWhitespace": true
+    },
+    {
+      "index": 81,
+      "type": "punctuation-brace",
+      "value": "}",
+      "startLine": 13,
+      "startColumn": 3,
+      "isWhitespace": false
+    },
+    {
+      "index": 82,
+      "type": "plain",
+      "value": "\n",
+      "startLine": 13,
+      "startColumn": 4,
+      "isWhitespace": true
+    },
+    {
+      "index": 83,
+      "type": "punctuation-brace",
+      "value": "}",
+      "startLine": 14,
+      "startColumn": 1,
+      "isWhitespace": false
+    }
+  ],
+  "groupsByType": {
+    "keyword": {
+      "count": 5,
+      "uniqueValues": [
+        "class",
+        "public",
+        "static"
+      ]
+    },
+    "plain": {
+      "count": 31,
+      "uniqueValues": [
+        "\n",
+        "\n\n  ",
+        "\n  ",
+        "\n    ",
+        " "
+      ]
+    },
+    "class": {
+      "count": 1,
+      "uniqueValues": [
+        "Main"
+      ]
+    },
+    "punctuation-brace": {
+      "count": 6,
+      "uniqueValues": [
+        "{",
+        "}"
+      ]
+    },
+    "primitive-type": {
+      "count": 4,
+      "uniqueValues": [
+        "boolean",
+        "int",
+        "void"
+      ]
+    },
+    "variable": {
+      "count": 3,
+      "uniqueValues": [
+        "bool",
+        "foo",
+        "num"
+      ]
+    },
+    "operator": {
+      "count": 3,
+      "uniqueValues": [
+        "="
+      ]
+    },
+    "number": {
+      "count": 1,
+      "uniqueValues": [
+        "1"
+      ]
+    },
+    "punctuation-delimiter": {
+      "count": 5,
+      "uniqueValues": [
+        ";"
+      ]
+    },
+    "literal": {
+      "count": 1,
+      "uniqueValues": [
+        "true"
+      ]
+    },
+    "type": {
+      "count": 1,
+      "uniqueValues": [
+        "String"
+      ]
+    },
+    "string": {
+      "count": 2,
+      "uniqueValues": [
+        "\"bar\"",
+        "\"Hello World!\""
+      ]
+    },
+    "function-declaration": {
+      "count": 2,
+      "uniqueValues": [
+        "main",
+        "printMessage"
+      ]
+    },
+    "punctuation-paren": {
+      "count": 6,
+      "uniqueValues": [
+        "(",
+        ")"
+      ]
+    },
+    "member": {
+      "count": 2,
+      "uniqueValues": [
+        "out",
+        "System"
+      ]
+    },
+    "punctuation-dot": {
+      "count": 2,
+      "uniqueValues": [
+        "."
+      ]
+    },
+    "function-call": {
+      "count": 2,
+      "uniqueValues": [
+        "println",
+        "printMessage"
+      ]
+    },
+    "parameter-type": {
+      "count": 1,
+      "uniqueValues": [
+        "String"
+      ]
+    },
+    "punctuation-bracket": {
+      "count": 2,
+      "uniqueValues": [
+        "[",
+        "]"
+      ]
+    },
+    "parameter": {
+      "count": 1,
+      "uniqueValues": [
+        "args"
+      ]
+    },
+    "comment": {
+      "count": 1,
+      "uniqueValues": [
+        "// Print message to stdout."
+      ]
+    },
+    "punctuation-empty-call-paren": {
+      "count": 2,
+      "uniqueValues": [
+        "(",
+        ")"
+      ]
+    }
+  },
+  "reverseLookupByTheme": {
+    "darcula": {
+      "#CC7832": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        }
+      ],
+      "#FFC66D": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#D4D4D4": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        }
+      ],
+      "#4EC9B0": [
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#9876AA": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        }
+      ],
+      "#A9B7C6": [
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "parameter",
+          "value": "args"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#6897BB": [
+        {
+          "type": "number",
+          "value": "1"
+        }
+      ],
+      "#6A8759": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#808080": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "deepdark-material-theme": {
+      "#69F0AE": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#B8FCB1": [
+        {
+          "type": "class",
+          "value": "Main"
+        }
+      ],
+      "#D0D0D0": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        }
+      ],
+      "#FFFB2A": [
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#FFFFFF": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        }
+      ],
+      "#FF5E5E": [
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#FF3E3E": [
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#80CBC4": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        }
+      ],
+      "#C9E9E0": [
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#D68D5B": [
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#808080": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "dracula": {
+      "#FF79C6": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        }
+      ],
+      "#8BE9FD": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#F8F8F2": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#BD93F9": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#F1FA8C": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#50FA7B": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#FFB86C": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#6272A4": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "gruvbox-dark-hard": {
+      "#FE8019": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#FABD2F": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#A89984": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#EBDBB2": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        }
+      ],
+      "#8EC07C": [
+        {
+          "type": "operator",
+          "value": "="
+        }
+      ],
+      "#D3869B": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#B8BB26": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#83A598": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#928374": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "jarvis-3d": {
+      "#4D9FFF": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#7AB8FF": [
+        {
+          "type": "class",
+          "value": "Main"
+        }
+      ],
+      "#E0F7FF": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#B8D9EB": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        }
+      ],
+      "#00D9FF": [
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#FFD95A": [
+        {
+          "type": "number",
+          "value": "1"
+        }
+      ],
+      "#FF9D5A": [
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#00FF9F": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#8DC9E6": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#4D7A9F": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "monokai-night": {
+      "#F92672": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        }
+      ],
+      "#A6E22E": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#DDDDDD": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#66D9EF": [
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#F8F8F2": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        }
+      ],
+      "#AE81FF": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#E6DB74": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#FD971F": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#75715E": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "monokai-pro-filter-spectrum": {
+      "#FC618D": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        }
+      ],
+      "#5AD4E6": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#8B888F": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#F7F1FF": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        }
+      ],
+      "#948AE3": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#FCE566": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#7BD88F": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#FD9353": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#69676C": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "nord": {
+      "#81A1C1": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        }
+      ],
+      "#8FBCBB": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#ECEFF4": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#D8DEE9": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#B48EAD": [
+        {
+          "type": "number",
+          "value": "1"
+        }
+      ],
+      "#A3BE8C": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#88C0D0": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#616E88": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "one-dark-pro-night-flat": {
+      "#C678DD": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        }
+      ],
+      "#E5C07B": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#ABB2BF": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#E06C75": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#56B6C2": [
+        {
+          "type": "operator",
+          "value": "="
+        }
+      ],
+      "#D19A66": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#98C379": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#61AFEF": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#7F848E": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "synthwave-84": {
+      "#FEDE5D": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#FE4450": [
+        {
+          "type": "class",
+          "value": "Main"
+        }
+      ],
+      "#BBBBBB": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#FF7EDB": [
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        },
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#FFFFFF": [
+        {
+          "type": "operator",
+          "value": "="
+        }
+      ],
+      "#F97E72": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#FF8B39": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#36F9F6": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#848BBD": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    },
+    "tokyo-night": {
+      "#9D7CD8": [
+        {
+          "type": "keyword",
+          "value": "public"
+        },
+        {
+          "type": "keyword",
+          "value": "class"
+        },
+        {
+          "type": "keyword",
+          "value": "static"
+        }
+      ],
+      "#C0CAF5": [
+        {
+          "type": "class",
+          "value": "Main"
+        },
+        {
+          "type": "variable",
+          "value": "num"
+        },
+        {
+          "type": "variable",
+          "value": "bool"
+        },
+        {
+          "type": "variable",
+          "value": "foo"
+        },
+        {
+          "type": "member",
+          "value": "System"
+        },
+        {
+          "type": "member",
+          "value": "out"
+        }
+      ],
+      "#9ABDF5": [
+        {
+          "type": "punctuation-brace",
+          "value": "{"
+        },
+        {
+          "type": "punctuation-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-paren",
+          "value": ")"
+        },
+        {
+          "type": "punctuation-brace",
+          "value": "}"
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": "("
+        },
+        {
+          "type": "punctuation-empty-call-paren",
+          "value": ")"
+        }
+      ],
+      "#BB9AF7": [
+        {
+          "type": "primitive-type",
+          "value": "int"
+        },
+        {
+          "type": "primitive-type",
+          "value": "boolean"
+        },
+        {
+          "type": "type",
+          "value": "String"
+        },
+        {
+          "type": "primitive-type",
+          "value": "void"
+        },
+        {
+          "type": "parameter-type",
+          "value": "String"
+        }
+      ],
+      "#89DDFF": [
+        {
+          "type": "operator",
+          "value": "="
+        },
+        {
+          "type": "punctuation-delimiter",
+          "value": ";"
+        },
+        {
+          "type": "punctuation-dot",
+          "value": "."
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "["
+        },
+        {
+          "type": "punctuation-bracket",
+          "value": "]"
+        }
+      ],
+      "#FF9E64": [
+        {
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "type": "literal",
+          "value": "true"
+        }
+      ],
+      "#9ECE6A": [
+        {
+          "type": "string",
+          "value": "\"bar\""
+        },
+        {
+          "type": "string",
+          "value": "\"Hello World!\""
+        }
+      ],
+      "#7AA2F7": [
+        {
+          "type": "function-declaration",
+          "value": "printMessage"
+        },
+        {
+          "type": "function-call",
+          "value": "println"
+        },
+        {
+          "type": "function-declaration",
+          "value": "main"
+        },
+        {
+          "type": "function-call",
+          "value": "printMessage"
+        }
+      ],
+      "#E0AF68": [
+        {
+          "type": "parameter",
+          "value": "args"
+        }
+      ],
+      "#51597D": [
+        {
+          "type": "comment",
+          "value": "// Print message to stdout."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "theme-generator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "verify:svg": "node scripts/verify-specimens.mjs",
+    "generate:blueprint": "node scripts/generate-token-blueprint.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2",
+    "vite": "^7.1.3"
+  }
+}
