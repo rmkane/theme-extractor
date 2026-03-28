@@ -1,23 +1,10 @@
-#!/usr/bin/env node
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
 import type { BlueprintToken } from '@/core/tokens'
 import type { Theme } from '@/theme/types'
 
-import { defaultLanguageId, getLanguageConfig } from '@/core/languages'
 import { normalizeHex } from '@/core/normalize-hex'
-import { buildTokenBlueprint } from '@/core/token-blueprint'
 import { getTokenColor } from '@/theme/theme-mapper'
-import { themes } from '@/theme/themes'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const projectRoot = path.resolve(__dirname, '..')
-const outputPath = path.join(projectRoot, 'reference', 'token-blueprint.json')
-
-function buildTypeGroups(
+export function buildTypeGroups(
   blueprint: BlueprintToken[],
 ): Record<string, { count: number; uniqueValues: string[] }> {
   const groups = new Map<string, string[]>()
@@ -41,7 +28,7 @@ function buildTypeGroups(
   return output
 }
 
-function buildThemeReverseLookup(
+export function buildThemeReverseLookup(
   theme: Theme,
   blueprint: BlueprintToken[],
 ): Record<string, { type: string; value: string }[]> {
@@ -78,33 +65,3 @@ function buildThemeReverseLookup(
 
   return reverseLookup
 }
-
-function main(): void {
-  const languageId = defaultLanguageId
-  const { sampleCode } = getLanguageConfig(languageId)
-  const blueprint = buildTokenBlueprint(languageId, sampleCode)
-  const typeGroups = buildTypeGroups(blueprint)
-
-  const themeReverseLookup: Record<string, Record<string, { type: string; value: string }[]>> = {}
-  for (const theme of themes) {
-    themeReverseLookup[theme.name] = buildThemeReverseLookup(theme, blueprint)
-  }
-
-  const payload = {
-    generatedAt: new Date().toISOString(),
-    source: {
-      languageId,
-      sampleCode,
-      tokenCount: blueprint.length,
-      nonWhitespaceTokenCount: blueprint.filter((token) => !token.isWhitespace).length,
-    },
-    tokenBlueprint: blueprint,
-    groupsByType: typeGroups,
-    reverseLookupByTheme: themeReverseLookup,
-  }
-
-  fs.writeFileSync(outputPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8')
-  console.log(`Wrote blueprint: ${outputPath}`)
-}
-
-main()

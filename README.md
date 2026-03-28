@@ -29,12 +29,14 @@ Install dependencies with `pnpm install`, then use:
 - `pnpm dev` to run the preview UI
 - `pnpm build` to build the app
 - `pnpm preview` to serve the production build
+- `pnpm run test` / `pnpm run test:watch` for **Vitest** (`src/**/*.test.ts`, `scripts/**/*.test.ts`)
 - `pnpm run typecheck` to run the TypeScript compiler (no emit)
 - `pnpm run lint` / `pnpm run lint:fix` to run ESLint (flat config + `typescript-eslint`)
 - `pnpm run format` / `pnpm run format:check` for Prettier (`@trivago/prettier-plugin-sort-imports` for import order — keep **`<TS_TYPES>.*`** — and `prettier-plugin-tailwindcss` for Tailwind class sorting; Tailwind plugin is listed last in `prettier.config.js` as required)
 - **VS Code / Cursor**: Install **Prettier** when prompted. Workspace settings pin Prettier, turn off the built-in TS/JS formatter, and set **Organize Imports**, **Remove unused imports**, and **ESLint fix-all** to not run on save (they run after Prettier and make saves look “random”). If anything still changes on save, check **User** settings for the same `editor.codeActionsOnSave` keys. Use **Output → Prettier** if the extension errors. Run `pnpm run format` for a CI-identical pass.
 - `pnpm run verify:svg` to compare tokenized output against the SVG specimens
 - `pnpm run generate:blueprint` to write `reference/token-blueprint.json`
+- **CI:** on push/PR to `main`, GitHub Actions runs `test`, `typecheck`, `lint`, `format:check`, `build`, and `verify:svg`
 
 ## Project Layout
 
@@ -73,8 +75,8 @@ vite.config.ts          Vite + Tailwind plugin
 Supporting directories:
 
 - `public/specimens/` contains the SVG references used by the verifier and UI
-- `scripts/verify-specimens.ts` validates token/color parity with the SVGs (run with `tsx`)
-- `scripts/generate-token-blueprint.ts` generates the reference blueprint artifact
+- `scripts/verify-specimens/` — SVG parsing, comparison, and `cli.ts` entry (`pnpm run verify:svg`)
+- `scripts/generate-token-blueprint/` — blueprint aggregation helpers and `cli.ts` entry (`pnpm run generate:blueprint`)
 - `reference/` stores generated analysis output
 
 ## Organization Notes
