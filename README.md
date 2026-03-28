@@ -28,7 +28,7 @@ Install dependencies with `pnpm install`, then use:
 - `pnpm run test` / `pnpm run test:watch` for **Vitest** (`src/**/*.test.ts`, `scripts/**/*.test.ts`)
 - `pnpm run typecheck` to run the TypeScript compiler (no emit)
 - `pnpm run lint` / `pnpm run lint:fix` to run ESLint (flat config + `typescript-eslint`)
-- `pnpm run format` / `pnpm run format:check` for Prettier (`@trivago/prettier-plugin-sort-imports`: **`<TS_TYPES>.*`**, then third-party, then **`^@config/`**, then **`^@/`**, then relative; `prettier-plugin-tailwindcss` last in `prettier.config.js` as required)
+- `pnpm run format` / `pnpm run format:check` for Prettier (`@trivago/prettier-plugin-sort-imports`: **`<TS_TYPES>.*`**, then third-party, then **`^@config/`**, then **`^@/`**, then relative; `prettier-plugin-tailwindcss` last in `prettier.config.js` as required). Markdown (`**/*.md`) is excluded in `.prettierignore`.
 - **VS Code / Cursor**: Install **Prettier** when prompted. Workspace settings pin Prettier, turn off the built-in TS/JS formatter, and set **Organize Imports**, **Remove unused imports**, and **ESLint fix-all** to not run on save (they run after Prettier and make saves look “random”). If anything still changes on save, check **User** settings for the same `editor.codeActionsOnSave` keys. Use **Output → Prettier** if the extension errors. Run `pnpm run format` for a CI-identical pass.
 - `pnpm run verify:svg` to compare tokenized output against the SVG specimens
 - `pnpm run generate:blueprint` to write `reference/token-blueprint.json`
