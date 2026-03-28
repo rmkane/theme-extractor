@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(rootDir, 'src'),
       '@config': path.resolve(rootDir, 'config'),
+      '@scripts': path.resolve(rootDir, 'scripts'),
     },
   },
   test: {

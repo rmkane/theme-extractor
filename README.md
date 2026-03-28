@@ -27,8 +27,8 @@ Install dependencies with `pnpm install`, then use:
 - `pnpm preview` to serve the production build
 - `pnpm run test` / `pnpm run test:watch` for **Vitest** (`src/**/*.test.ts`, `scripts/**/*.test.ts`)
 - `pnpm run typecheck` to run the TypeScript compiler (no emit)
-- `pnpm run lint` / `pnpm run lint:fix` to run ESLint (flat config + `typescript-eslint`)
-- `pnpm run format` / `pnpm run format:check` for Prettier (`@trivago/prettier-plugin-sort-imports`: **`<TS_TYPES>.*`**, then third-party, then **`^@config/`**, then **`^@/`**, then relative; `prettier-plugin-tailwindcss` last in `prettier.config.js` as required). Markdown (`**/*.md`) is excluded in `.prettierignore`.
+- `pnpm run lint` / `pnpm run lint:fix` to run ESLint (flat config + `typescript-eslint`; `no-restricted-imports` blocks `./` and `../` under `src/` and `scripts/` except barrel re-exports in `src/schemas/index.ts`)
+- `pnpm run format` / `pnpm run format:check` for Prettier (`@trivago/prettier-plugin-sort-imports`: **`<TS_TYPES>.*`**, then third-party, then **`^@config/`**, **`^@scripts/`**, **`^@/`**, then relative; `prettier-plugin-tailwindcss` last in `prettier.config.js` as required). Markdown (`**/*.md`) is excluded in `.prettierignore`.
 - **VS Code / Cursor**: Install **Prettier** when prompted. Workspace settings pin Prettier, turn off the built-in TS/JS formatter, and set **Organize Imports**, **Remove unused imports**, and **ESLint fix-all** to not run on save (they run after Prettier and make saves look “random”). If anything still changes on save, check **User** settings for the same `editor.codeActionsOnSave` keys. Use **Output → Prettier** if the extension errors. Run `pnpm run format` for a CI-identical pass.
 - `pnpm run verify:svg` to compare tokenized output against the SVG specimens
 - `pnpm run generate:blueprint` to write `reference/token-blueprint.json`
@@ -66,7 +66,7 @@ src/app/
   preview.ts            DOM rendering for the live preview
   appearance.ts         Light/dark/system appearance handling
   style.css             UI styles
-tsconfig.json           Strict TS; `@/*` → `./src/*`, `@config/*` → `./config/*` (Vite mirrors both)
+tsconfig.json           Strict TS; `@/*` → `./src/*`, `@config/*`, `@scripts/*` (Vite mirrors the same aliases)
 vite.config.ts          Vite + Tailwind; Vitest merged via `vitest/config` + `test` block
 ```
 
@@ -86,7 +86,7 @@ Supporting directories:
 - **`src/theme`** holds theme **code** (types, mapper, specimen loader). Palette data lives in `config/themes.data.json`; specimen file names in `config/specimens.data.json` (both validated via **`@/schemas`**).
 - **`src/render`** turns classified tokens into styled HTML; it depends on core + theme but not on the DOM.
 - **`src/app`** is the Vite entry and all browser-specific UI code.
-- CLI scripts import from `src/core` and `src/theme` and keep their own orchestration (SVG parsing, JSON layout) in `scripts/`.
+- CLI scripts import from `@/core` and `@/theme`, and use **`@scripts/…`** for modules under `scripts/` (no `../` between script packages). Barrel **`src/schemas/index.ts`** is the only place that uses relative `./` re-exports.
 
 ## Workflow
 

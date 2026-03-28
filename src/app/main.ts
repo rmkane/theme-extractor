@@ -1,12 +1,11 @@
 import type { LanguageId } from '@/core/languages'
 
+import { initializeAppearance } from '@/app/appearance'
+import { renderTheme } from '@/app/preview'
+import '@/app/style.css'
 import { defaultLanguageId, getLanguageConfig, getLanguageOptions } from '@/core/languages'
 import { getSpecimenPath } from '@/theme/specimens'
 import { themes } from '@/theme/themes'
-
-import { initializeAppearance } from './appearance'
-import { renderTheme } from './preview'
-import './style.css'
 
 const appearanceSelector = document.getElementById('appearance-selector') as HTMLSelectElement
 const themeSelector = document.getElementById('theme-selector') as HTMLSelectElement

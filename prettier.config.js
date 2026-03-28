@@ -14,6 +14,7 @@ const config = {
     '<TS_TYPES>.*',
     '<THIRD_PARTY_MODULES>',
     '^@config/',
+    '^@scripts/',
     '^@/(.*)$',
     '^[.]',
   ],

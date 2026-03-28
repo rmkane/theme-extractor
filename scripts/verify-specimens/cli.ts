@@ -3,16 +3,19 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import type { MismatchExample } from './compare-segments'
+import type { MismatchExample } from '@scripts/verify-specimens/compare-segments'
+
+import { buildActualSegments } from '@scripts/verify-specimens/actual-segments'
+import {
+  buildExpectedCodeAndColors,
+  compareSegmentsToSvg,
+} from '@scripts/verify-specimens/compare-segments'
+import { validateSpecimenCoverage } from '@scripts/verify-specimens/coverage'
+import { buildExpectedCharStreamFromSvg } from '@scripts/verify-specimens/svg-specimen'
 
 import { defaultLanguageId, getLanguageConfig } from '@/core/languages'
 import { specimenByTheme } from '@/theme/specimens'
 import { themes } from '@/theme/themes'
-
-import { buildActualSegments } from './actual-segments'
-import { buildExpectedCodeAndColors, compareSegmentsToSvg } from './compare-segments'
-import { validateSpecimenCoverage } from './coverage'
-import { buildExpectedCharStreamFromSvg } from './svg-specimen'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

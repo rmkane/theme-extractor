@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest'
 
-import { buildExpectedCodeAndColors, compareSegmentsToSvg } from './compare-segments'
+import {
+  buildExpectedCodeAndColors,
+  compareSegmentsToSvg,
+} from '@scripts/verify-specimens/compare-segments'
 
 describe('buildExpectedCodeAndColors', () => {
   it('joins characters and preserves color order', () => {

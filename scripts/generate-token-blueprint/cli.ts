@@ -3,11 +3,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import {
+  buildThemeReverseLookup,
+  buildTypeGroups,
+} from '@scripts/generate-token-blueprint/blueprint-analysis'
+
 import { defaultLanguageId, getLanguageConfig } from '@/core/languages'
 import { buildTokenBlueprint } from '@/core/token-blueprint'
 import { themes } from '@/theme/themes'
-
-import { buildThemeReverseLookup, buildTypeGroups } from './blueprint-analysis'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)

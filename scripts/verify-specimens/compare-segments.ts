@@ -1,5 +1,5 @@
-import type { ActualSegment } from './actual-segments'
-import type { ExpectedChar } from './svg-specimen'
+import type { ActualSegment } from '@scripts/verify-specimens/actual-segments'
+import type { ExpectedChar } from '@scripts/verify-specimens/svg-specimen'
 
 const isWhitespace = (value: string): boolean => /^\s+$/.test(value)
 

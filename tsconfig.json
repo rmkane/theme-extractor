@@ -6,7 +6,8 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"],
-      "@config/*": ["./config/*"]
+      "@config/*": ["./config/*"],
+      "@scripts/*": ["./scripts/*"]
     },
     "resolveJsonModule": true,
     "noEmit": true,
