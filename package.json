@@ -7,12 +7,30 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "verify:svg": "node scripts/verify-specimens.mjs",
-    "generate:blueprint": "node scripts/generate-token-blueprint.mjs"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify:svg": "tsx scripts/verify-specimens.ts",
+    "generate:blueprint": "tsx scripts/generate-token-blueprint.ts"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.2.2",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.2.2",
-    "vite": "^7.1.3"
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.57.2",
+    "vite": "^8.0.3"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
   }
 }
