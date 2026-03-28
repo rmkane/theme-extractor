@@ -46,9 +46,11 @@ Install dependencies with `pnpm install`, then use:
 config/
   languages.data.json   Language definitions (keywords, sample code, lexer regex as JSON)
   specimens.data.json   Theme id → specimen SVG file name (under `public/specimens/`)
+  themes.data.json      Theme palettes (`themes` array: name, colors, optional styles)
 src/schemas/
   language-schema.ts    Zod schemas for `config/languages.data.json`
   specimen-schema.ts    Zod schema for `config/specimens.data.json`
+  theme-schema.ts       Zod schemas for `config/themes.data.json`
   index.ts              Re-exports schema modules (`import "@/schemas"`)
 src/core/
   languages.ts          Loads config JSON, validates with Zod, builds `RegExp` + `Set` runtime config
@@ -58,7 +60,7 @@ src/core/
   normalize-hex.ts      Shared hex normalization for scripts and tooling
 src/theme/
   types.ts              Theme and palette TypeScript types
-  themes.ts             Theme palette definitions
+  themes.ts             Loads `config/themes.data.json`, validates, sorts by name
   specimens.ts          Loads config JSON, validates, exposes `getSpecimenPath`
   theme-mapper.ts       Maps token types to theme colors and styles
 src/render/
@@ -84,14 +86,14 @@ Supporting directories:
 - **`config/`** holds JSON-only inputs. TypeScript loads them via the `@config/…` import alias.
 - **`src/schemas`** is the Zod layer: schemas for `config/*.data.json`, re-exported from `index.ts` as **`@/schemas`**.
 - **`src/core`** is lexer- and language-only: no DOM, no theme palettes, no HTML. Language metadata is loaded from `config/languages.data.json` and validated with **`@/schemas`**.
-- **`src/theme`** holds static theme **code** (palettes, mapper, specimen loader). Specimen file names live in `config/specimens.data.json` (validated via **`@/schemas`**).
+- **`src/theme`** holds theme **code** (types, mapper, specimen loader). Palette data lives in `config/themes.data.json`; specimen file names in `config/specimens.data.json` (both validated via **`@/schemas`**).
 - **`src/render`** turns classified tokens into styled HTML; it depends on core + theme but not on the DOM.
 - **`src/app`** is the Vite entry and all browser-specific UI code.
 - CLI scripts import from `src/core` and `src/theme` and keep their own orchestration (SVG parsing, JSON layout) in `scripts/`.
 
 ## Workflow
 
-1. Add or update a theme in `src/theme/themes.ts`.
+1. Add or update a theme in `config/themes.data.json` (shape is enforced by `src/schemas/theme-schema.ts`).
 2. Map its specimen SVG in `config/specimens.data.json` (shape is enforced by `src/schemas/specimen-schema.ts`).
 3. Run `pnpm run verify:svg` to confirm token and color coverage.
 4. Run `pnpm run generate:blueprint` if you need updated reference output.

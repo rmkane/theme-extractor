@@ -1,4 +1,4 @@
-import specimensDataJson from '@config/specimens.data.json'
+import specimensDataJson from '@config/specimens.data.json' with { type: 'json' }
 
 import { specimensDataFileSchema } from '@/schemas'
 

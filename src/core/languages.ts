@@ -1,4 +1,4 @@
-import languagesDataJson from '@config/languages.data.json'
+import languagesDataJson from '@config/languages.data.json' with { type: 'json' }
 
 import { type LanguageRecordJson, languagesDataFileSchema } from '@/schemas'
 

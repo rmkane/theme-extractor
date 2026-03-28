@@ -1,4 +1,4 @@
-import type { Theme } from './types'
+import type { Theme } from '@/theme/types'
 
 function getTokenColor(theme: Theme, type: string): string | undefined {
   switch (type) {
