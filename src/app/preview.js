@@ -1,6 +1,6 @@
-import { themes } from "./themes.js";
-import { defaultLanguageId } from "./languages.js";
-import { highlightCode } from "./renderer.js";
+import { themes } from "../theme/themes.js";
+import { defaultLanguageId } from "../core/languages.js";
+import { highlightCode } from "../render/highlight.js";
 
 function formatThemeName(name) {
   return name

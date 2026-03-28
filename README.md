@@ -30,18 +30,26 @@ Install dependencies with `pnpm install`, then use:
 
 ## Project Layout
 
-The source tree is intentionally small and flat.
+`src/` is grouped by role; each folder stays small.
 
 ```text
-src/
-  languages.js      Language registry and runtime config helpers
-  main.js           Browser bootstrap and UI event wiring
-  preview.js        DOM rendering for the live preview
-  sample-code.js    Shared sample snippet used by the Java config
-  specimens.js      Theme-to-SVG specimen mapping
-  style.css         UI styles
-  themes.js         Theme palette definitions
-  tokenizer.js      Tokenization, blueprint generation, and HTML highlighting
+src/core/
+  languages.js        Language registry and runtime config helpers
+  lexer.js              Tokenization and semantic classification
+  token-blueprint.js    Lexer output plus line/column positions (reference tokens)
+  normalize-hex.js      Shared hex normalization for scripts and tooling
+  sample-code.js        Shared sample snippet used by the Java config
+src/theme/
+  themes.js             Theme palette definitions
+  specimens.js          Theme-to-SVG specimen mapping
+  theme-mapper.js       Maps token types to theme colors and styles
+src/render/
+  highlight.js          Theme-aware render model and HTML highlighting
+src/app/
+  main.js               Browser bootstrap and UI event wiring
+  preview.js            DOM rendering for the live preview
+  appearance.js         Light/dark/system appearance handling
+  style.css             UI styles
 ```
 
 Supporting directories:
@@ -53,18 +61,16 @@ Supporting directories:
 
 ## Organization Notes
 
-`src/` is well-organized for its current size:
-
-- data modules are separated from behavior modules
-- CLI scripts live outside `src/` and consume shared modules instead of duplicating logic
-- language-specific configuration is isolated in `languages.js`, which keeps the tokenizer API language-first
-
-The one boundary worth enforcing was keeping DOM preview rendering out of `tokenizer.js`; that logic now lives in `preview.js`. If the project grows to support multiple languages or more UI modes, the next sensible split would be `src/data/` and `src/lib/`, but that would be premature today.
+- **`src/core`** is lexer- and language-only: no DOM, no theme palettes, no HTML.
+- **`src/theme`** holds static theme data and the type-to-color mapping used by the verifier, generator, and highlighter.
+- **`src/render`** turns classified tokens into styled HTML; it depends on core + theme but not on the DOM.
+- **`src/app`** is the Vite entry and all browser-specific UI code.
+- CLI scripts import from `src/core` and `src/theme` and keep their own orchestration (SVG parsing, JSON layout) in `scripts/`.
 
 ## Workflow
 
-1. Add or update a theme in `src/themes.js`.
-2. Map its specimen SVG in `src/specimens.js`.
+1. Add or update a theme in `src/theme/themes.js`.
+2. Map its specimen SVG in `src/theme/specimens.js`.
 3. Run `pnpm run verify:svg` to confirm token and color coverage.
 4. Run `pnpm run generate:blueprint` if you need updated reference output.
 

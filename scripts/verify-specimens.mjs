@@ -2,11 +2,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { themes } from "../src/themes.js";
-import { defaultLanguageId, getLanguageConfig } from "../src/languages.js";
-import { tokenizeCode } from "../src/lexer.js";
-import { getTokenColor } from "../src/theme-mapper.js";
-import { specimenByTheme } from "../src/specimens.js";
+import { themes } from "../src/theme/themes.js";
+import { defaultLanguageId, getLanguageConfig } from "../src/core/languages.js";
+import { tokenizeCode } from "../src/core/lexer.js";
+import { getTokenColor } from "../src/theme/theme-mapper.js";
+import { specimenByTheme } from "../src/theme/specimens.js";
+import { normalizeHex } from "../src/core/normalize-hex.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,24 +15,6 @@ const baseDir = path.resolve(__dirname, "..");
 const specimensDir = path.join(baseDir, "public", "specimens");
 
 const isWhitespace = (value) => /^\s+$/.test(value);
-
-function normalizeHex(input) {
-  if (!input) {
-    return null;
-  }
-  const hex = input.toUpperCase();
-  if (/^#[0-9A-F]{3}$/.test(hex)) {
-    return `#${hex
-      .slice(1)
-      .split("")
-      .map((character) => character + character)
-      .join("")}`;
-  }
-  if (/^#[0-9A-F]{8}$/.test(hex)) {
-    return hex.slice(0, 7);
-  }
-  return hex;
-}
 
 function decodeEntities(text) {
   return text

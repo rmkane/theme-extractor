@@ -4,10 +4,10 @@ import {
   defaultLanguageId,
   getLanguageConfig,
   getLanguageOptions,
-} from "./languages.js";
+} from "../core/languages.js";
 import { renderTheme } from "./preview.js";
-import { themes } from "./themes.js";
-import { getSpecimenPath } from "./specimens.js";
+import { themes } from "../theme/themes.js";
+import { getSpecimenPath } from "../theme/specimens.js";
 
 const appearanceSelector = document.getElementById("appearance-selector");
 const themeSelector = document.getElementById("theme-selector");

@@ -2,33 +2,16 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { themes } from "../src/themes.js";
-import { defaultLanguageId, getLanguageConfig } from "../src/languages.js";
-import { buildTokenBlueprint } from "../src/renderer.js";
-import { getTokenColor } from "../src/theme-mapper.js";
+import { themes } from "../src/theme/themes.js";
+import { defaultLanguageId, getLanguageConfig } from "../src/core/languages.js";
+import { buildTokenBlueprint } from "../src/core/token-blueprint.js";
+import { getTokenColor } from "../src/theme/theme-mapper.js";
+import { normalizeHex } from "../src/core/normalize-hex.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 const outputPath = path.join(projectRoot, "reference", "token-blueprint.json");
-
-function normalizeHex(input) {
-  if (!input) {
-    return null;
-  }
-  const hex = input.toUpperCase();
-  if (/^#[0-9A-F]{3}$/.test(hex)) {
-    return `#${hex
-      .slice(1)
-      .split("")
-      .map((character) => character + character)
-      .join("")}`;
-  }
-  if (/^#[0-9A-F]{8}$/.test(hex)) {
-    return hex.slice(0, 7);
-  }
-  return hex;
-}
 
 function buildTypeGroups(blueprint) {
   const groups = new Map();

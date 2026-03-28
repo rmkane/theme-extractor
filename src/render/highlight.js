@@ -1,40 +1,12 @@
-import { defaultLanguageId } from "./languages.js";
-import { tokenizeCode } from "./lexer.js";
-import { getTokenColor, getTokenStyle } from "./theme-mapper.js";
+import { defaultLanguageId } from "../core/languages.js";
+import { buildTokenBlueprint } from "../core/token-blueprint.js";
+import { getTokenColor, getTokenStyle } from "../theme/theme-mapper.js";
 
 function escapeHtml(value) {
   return value
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
-}
-
-function buildTokenBlueprint(languageId = defaultLanguageId, code = "") {
-  let line = 1;
-  let column = 1;
-
-  return tokenizeCode(languageId, code).map((token, index) => {
-    const startLine = line;
-    const startColumn = column;
-
-    for (const character of token.value) {
-      if (character === "\n") {
-        line += 1;
-        column = 1;
-      } else {
-        column += 1;
-      }
-    }
-
-    return {
-      index,
-      type: token.type,
-      value: token.value,
-      startLine,
-      startColumn,
-      isWhitespace: token.type === "plain" && /^\s+$/.test(token.value),
-    };
-  });
 }
 
 function buildRenderModel(languageId = defaultLanguageId, code = "", theme) {
@@ -119,4 +91,4 @@ function highlightCode(languageId = defaultLanguageId, code = "", theme) {
     .join("");
 }
 
-export { buildTokenBlueprint, buildRenderModel, highlightCode };
+export { buildRenderModel, highlightCode };
